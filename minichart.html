@@ -18,18 +18,13 @@
             var iframe = document.createElement('iframe')
             iframe.setAttribute(
                 'src',
-                `https://s.tradingview.com/embed-widget/mini-symbol-overview#{"symbol":"${symbol}","isTransparent":false,"colorTheme":"dark","autosize":"true","utm_campaign":"mini-symbol-overview"}`,
+                `https://s.tradingview.com/embed-widget/mini-symbol-overview#{"symbol":"BINANCE:SOLUSDT","dateRange":"1D","colorTheme":"dark","trendLineColor":"rgba(41, 98, 255, 1)"}`,
             );
-            //iframe.setAttribute('scrolling', 'no')
-            //iframe.setAttribute('allowtransparency', 'true')
             iframe.setAttribute('frameborder', 0)
-            //iframe.setAttribute('style', 'box-sizing: border-box; height: calc(200px); width: 370px;')
-            iframe.setAttribute('dateRange', '12M')
+            iframe.setAttribute('style', 'box-sizing: border-box; height: 100%; width: 100%;')
             iframe.setAttribute('trendLineColor', 'rgba(41, 98, 255, 1)')
             iframe.setAttribute('underLineColor', 'rgba(41, 98, 255, 0.3)')
             iframe.setAttribute('underLineBottomColor', 'rgba(41, 98, 255, 0)')
-            iframe.setAttribute('autosize', 'true')
-            iframe.setAttribute('colorTheme', 'dark')
             container.appendChild(iframe)
         });
     </script>
