@@ -13,17 +13,15 @@
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
         const container = document.getElementById("view")
-        const symbol = getParameterByName('fx')
+        const symbol = getParameterByName('pair')
         document.addEventListener('DOMContentLoaded', function () {
             var iframe = document.createElement('iframe')
             iframe.setAttribute(
                 'src',
-                `https://s.tradingview.com/embed-widget/single-quote#{"width":350,"symbol":"FX:${symbol}","isTransparent":false,"height":126,"utm_source":"","utm_medium":"widget","utm_campaign":"single-quote"}`,
+                `https://s.tradingview.com/embed-widget/single-quote#{"symbol":"${symbol}","colorTheme":"dark"}`,
             );
-            iframe.setAttribute('scrolling', 'no')
-            iframe.setAttribute('allowtransparency', 'true')
             iframe.setAttribute('frameborder', 0)
-            iframe.setAttribute('style', 'box-sizing: border-box; height: calc(94px); width: 350px;')
+            iframe.setAttribute('style', 'box-sizing: border-box; height: 100%; width: 100%;')
             container.appendChild(iframe)
         });
     </script>
